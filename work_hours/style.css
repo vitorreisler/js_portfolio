@@ -15,6 +15,10 @@ div.form {
 
 
 input {
+    border: 1px solid rgba(0, 0, 0, 0.519);
     width: 10%;
+    border-radius: 12px;
+    text-align: center;
+    filter:drop-shadow(1px 2px 2px);
 }
 
