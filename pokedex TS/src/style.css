@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.row {
+    margin: 100px 0 ;
+    
+}
+
+div.col {
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+
+
+
+div#res {
+    /*display: flex;*/
+    width: 25%;
+}
+
+h6 {
+    display: inline;
+}
+
+.lista {
+    display: block;
+}
+
+.listHidden{
+    display: none;
+}
+
+/* ===== Scrollbar CSS ===== */
+ 
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ff0000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    border: 3px solid #000000;
+  }

@@ -1,0 +1,11 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "rootDir": "src",
+    "outDir": "./build",
+    "noImplicitAny": true,
+    "target": "ESNext",
+    "lib": ["ES2022", "DOM"]
+  }
+}
