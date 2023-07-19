@@ -2,7 +2,6 @@ let $backgrounds = document.querySelectorAll(".bg-light")
 let $text = document.querySelectorAll(".black-letter")
 /* let $moonSun = document.querySelector(".fa-moon") */
 let $moonSun = document.getElementById("darkLight-icon")
-console.log($moonSun);
 $moonSun.addEventListener("click", darkLightMode)
 
 function darkLightMode(){
