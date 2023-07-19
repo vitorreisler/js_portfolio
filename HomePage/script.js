@@ -17,11 +17,11 @@ function darkLightMode(){
 
 
     if (document.body.classList.contains("dark-theme")){
-        $moonSun.src = "./imgs/moon-solid.png"
+        $moonSun.src = "./HomePage/imgs/moon-solid.png"
         document.body.classList.remove("dark-theme")
     } else {
         document.body.classList.add("dark-theme")
-        $moonSun.src = "./imgs/sun-regular.png"
+        $moonSun.src = "./HomePage/imgs/sun-regular.png"
         
     }
 

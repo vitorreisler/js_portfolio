@@ -80,7 +80,9 @@ function save(winner) {
 }
 function cleanLS() {
     localStorage.clear();
-    location.reload();
     winnerX.innerHTML = "Player X: 0";
     winnerO.innerHTML = "Player O: 0";
+    location.reload();
+    winnerIX = 0;
+    winnerIO = 0;
 }
