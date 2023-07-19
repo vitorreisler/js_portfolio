@@ -111,11 +111,15 @@ export class salaryCalc {
           `;
     }
 
-
-
-
-
-
+    
+    
+    
   }
 
+  playCashierSound(){
+    let audio = document.getElementById("cashierSound")
+     return audio.play()
+  
+  }
+  
 }
