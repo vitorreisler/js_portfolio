@@ -111,9 +111,7 @@ export class salaryCalc {
           `;
     }
 
-    
-    
-    
+   
   }
 
   playCashierSound(){

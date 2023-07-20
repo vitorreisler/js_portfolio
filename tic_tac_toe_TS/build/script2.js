@@ -31,6 +31,7 @@ function start() {
     });
 }
 start();
+
 function newMove(e) {
     let clickedElement = e.target;
     console.log(clickedElement);
