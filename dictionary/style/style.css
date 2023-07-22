@@ -17,7 +17,7 @@ body div#search-bar-container {
 }
 body div#search-bar {
   height: 40px;
-  gap: 10px;
+  gap: 5px;
 }
 body div#search-bar div#input-search {
   height: 30px;
