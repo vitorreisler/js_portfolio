@@ -28,13 +28,13 @@ main {
 div.message {
     font-size: 2rem;
 }
-div#res {
+div#res-watch {
    font-size: 5rem;
     
 }
 
 main.morning {
-    background-image: url("./img/manhas.jpg");
+    background-image: url("../img/manhas.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(223, 205, 40, 0.537) ;
@@ -42,7 +42,7 @@ main.morning {
 }
 
 main.evening {
-    background-image: url("./img/evening.jpg");
+    background-image: url("../img/evening.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(13, 32, 236, 0.9) ;
@@ -50,10 +50,15 @@ main.evening {
 }
 
 main.night {
-    background-image: url("./img/night.jpg");
+    background-image: url("../img/night.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: #333 ;
     color: whitesmoke;
+}
+
+input#input-weather {
+    border-radius: 10px;
+    text-align: center;
 }
 
