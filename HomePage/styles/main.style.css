@@ -146,7 +146,7 @@ button a:hover {
       margin-top: 20px;
     }
 
-    .black-letter {
+    p.black-letter {
       margin-block: 15px;
     }
     
@@ -264,7 +264,7 @@ button a:hover {
 
 
 /********DarkMode, DO NOT TOUCH************/
-  p.white-letter{
+  .white-letter{
     color: white;
   }
 
