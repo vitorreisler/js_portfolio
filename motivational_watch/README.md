@@ -30,4 +30,4 @@ The weather details will include the current temperature, maximum temperature, a
 - JavaScript
 
 # External APIs
-The application uses the `[API-Ninjas Weather API](https://api-ninjas.com/)`  to fetch weather data for the specified city.
+The application uses the `API-Ninjas Weather API (https://api-ninjas.com/)`  to fetch weather data for the specified city.
