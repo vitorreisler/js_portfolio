@@ -28,7 +28,7 @@ const winPositions:[number,number,number][] = [
     [1,4,7]
 ]
 
-
+// Start the game taking all the buttons and seting them as empty string and clickable, when clicked will run the fn newMove
 function start(){
     selected = []
 
@@ -40,21 +40,17 @@ function start(){
 }
 
 start()
-
+//take the data-i and changing to a number, filling the button with the player and taking out the eventlistener, to be not able to click again, pushing the player into selected array with index from data-i
 function newMove(e:MouseEvent){
     let clickedElement= e.target as HTMLElement
-    console.log(clickedElement);
 
     const index = parseInt(clickedElement.getAttribute("data-i"))
-    console.log(index);
     
     clickedElement.innerHTML = player
 
     clickedElement.removeEventListener("click",newMove)
     
     selected[index] = player
-    console.log(selected[index]);
-
 
     setTimeout(() => {
         WINNER()
@@ -65,7 +61,7 @@ function newMove(e:MouseEvent){
         
 }
 
-
+//Checking the player, using map throw selected array to create a new array, using filter in this new array to create many other arrays with the player and the index
 let WINNER = function check(){
     let playerLastMove = player === "X" ?  "O" : "X"
 

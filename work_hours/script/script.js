@@ -1,4 +1,4 @@
-import { salaryCalc } from "./logic.class.js";
+import { salaryCalc } from "../script/logic.class.js";
 let run = document.getElementById("btn-run")
 
 let newSalaryCalc = new salaryCalc()

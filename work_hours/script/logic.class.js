@@ -7,6 +7,7 @@ export class salaryCalc {
     this.workedHours = workedHours;
   }
 
+  //Get the work hours and amount/h and multiplicate
   normalWorkDay() {
     const valueHour = parseFloat(document.getElementById("salary-hour").value);
     const workedHours = parseFloat(
@@ -16,6 +17,8 @@ export class salaryCalc {
     console.log(daySalary);
     return daySalary;
   }
+
+  //Getting the whole worked hours, inside this number taking hours with 125% and doing the math
 
   dayWith125() {
     const valueHour = parseFloat(document.getElementById("salary-hour").value);
@@ -32,6 +35,7 @@ export class salaryCalc {
     return daySalaryWith125perc;
   }
 
+  //Getting the whole worked hours, inside this number taking hours with 150% and doing the math
   dayWith150() {
     const valueHour = parseFloat(document.getElementById("salary-hour").value);
     const workedHours = parseFloat(
@@ -47,6 +51,7 @@ export class salaryCalc {
     return daySalaryWith150perc;
   }
 
+  //Doing all the math and rendering the html according with the right situation
   renderTotal() {
     const res = document.getElementById("res");
     const valueHour = parseFloat(document.getElementById("salary-hour").value);
@@ -62,7 +67,7 @@ export class salaryCalc {
     );
 
     let daySalary = valueHour * workedHours;
-    let monthSalary = (valueHour * workedHours) * workedDays;
+    let monthSalary = valueHour * workedHours * workedDays;
     let allDay150 = daySalary * 1.5;
 
     let daySalaryWith125perc =
@@ -110,14 +115,11 @@ export class salaryCalc {
           In your 12 hours day work you receive: ${workDay12Hours} <br>
           `;
     }
-
-   
   }
 
-  playCashierSound(){
-    let audio = document.getElementById("cashierSound")
-     return audio.play()
-  
+  //Playing the sound after enter
+  playCashierSound() {
+    let audio = document.getElementById("cashierSound");
+    return audio.play();
   }
-  
 }
