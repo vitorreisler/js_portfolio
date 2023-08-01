@@ -26,14 +26,14 @@ body div#search-bar button#btn {
   height: 40px;
   margin-block: auto;
 }
-body div#res-word {
+body section#res-word {
   display: flex;
   align-items: center;
 }
-body div#audio {
+body section#audio {
   margin-block: auto;
 }
-body div#audio .original-button {
+body section#audio .original-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ body div#audio .original-button {
   transition: 0.3s;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
-body div#audio .original-button:hover {
+body section#audio .original-button:hover {
   transform: translateY(2px);
   box-shadow: 0 0 rgba(0, 0, 0, 0);
 }

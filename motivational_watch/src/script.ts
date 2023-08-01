@@ -1,8 +1,6 @@
 let $resWatch = document.querySelector("#res-watch")
 let $resWeather = document.querySelector("#res-weather") 
 let $btnWeather = document.querySelector("#btn-weather") as HTMLButtonElement
-console.log($btnWeather);
-
 let $inputWeather = document.querySelector("#input-weather") as HTMLInputElement
 let myMain = document.getElementById("main")
 let message = document.querySelector(".message")
@@ -51,21 +49,25 @@ window.addEventListener("keypress", (e)=> {
 /*******Functions*********/
 
 
-
+//Taking random number
 function getRandomInt(min:number, max:number) {
     return min + Math.floor(Math.random() * (max - min - 1));
 }
 
+//Getting a random number from 0 to the array length 
 function shufflePhrases(){
     indexPhrase = getRandomInt(0,phrasesLength)
     return indexPhrase 
 }
 
+//Using the number that we got from shufflePhrases as index to choose randomly a phrase
 function renderPhrase(){
+    shufflePhrases()
     return message.innerHTML = `${phrases[indexPhrase]}`
 
 }
 
+// build the watch logic, checking each second
 function runTime(){
     let date = new Date()
     let seconds:string|number = date.getSeconds()
@@ -82,8 +84,8 @@ setTimeout(runTime, 1000)
 }
 runTime()
 
+//Checking the hour to change the bg-color and bg-image
 function checkHourForChangeBg(){
-    shufflePhrases()
     let date = new Date
     let hours = date.getHours()
     let minutes = date.getMinutes()
@@ -114,6 +116,7 @@ checkHourForChangeBg()
 
 
 /********* API *************/
+//Getting the input value
 function getInputValue(){
     let $inputValue = $inputWeather.value
     $inputValue.toString()
@@ -122,6 +125,7 @@ function getInputValue(){
     
 }
 
+//Getting the promise 
 async function getPromise(city:string){
 let apiRaw = fetch(`${API_BASE}${city}`, {
 method: "GET",
@@ -133,11 +137,10 @@ headers: {
 return (await apiRaw).json()
 }
 
+//Destructuring the Obj returned by the promise and doing Render to the infos
 async function renderWeather(city:string){
-    let weatherObj = await getPromise(`${city}`)
+    let weatherObj = await getPromise(city)
     let {temp,min_temp,max_temp} = weatherObj
-    console.log(temp,min_temp,max_temp);
-    console.log(weatherObj);
     $resWeather.innerHTML = `
     <br>
     City: ${city} <br>
@@ -145,8 +148,7 @@ async function renderWeather(city:string){
     Max-Temp: ${max_temp} <br>
     Min-Temp: ${min_temp}
     `
-        
-
+    
 }
 
 

@@ -13,7 +13,7 @@ const [
     audio8
 ] = audio
 
-
+//Looking which keyBoard was pressed in the keyboard and according the key pressed Code, is playing the specific sound
 document.addEventListener("keydown", (element) => {
     let dataSetValue = element.keyCode
     console.log(dataSetValue);
@@ -29,11 +29,12 @@ document.addEventListener("keydown", (element) => {
      
 })
 
+//For mobile, looking if the HTMLelement touched had a value of the letter and according this playing the specific sound
  document.addEventListener("touchstart", (e) => {
     let target = e.target as HTMLElement 
     let touchTargetValue = target.innerText
     
-    touchTargetValue === "A" ? audio1.play() : null
+        touchTargetValue === "A" ? audio1.play() : null
         touchTargetValue === "S" ? audio2.play() : null
         touchTargetValue === "D" ? audio3.play() : null
         touchTargetValue === "F" ? audio4.play() : null
