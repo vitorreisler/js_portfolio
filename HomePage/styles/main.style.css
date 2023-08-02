@@ -10,6 +10,17 @@ html {
   background-color: rgba(216, 223, 86, 0);
 }
 
+.card {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-body-technologys {
+    margin-top:41%;
+  }
+  
+  }
+
 button a {
   text-decoration: none;
   padding: 5px;
